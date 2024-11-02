@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+$color_lime_green: hsl(163, 72%, 41%);
+$color_bright_red: hsl(356, 69%, 56%);
+$color_facebook: hsl(208, 92%, 53%);
+$color_twitter: hsl(203, 89%, 53%);
+$color_instagram: linear-gradient(
+  to right,
+  hsl(37, 97%, 70%) 0%,
+  hsl(329, 70%, 58%) 100%
+);
+
+$color_youtube: hsl(348, 97%, 39%);
+
+$theme_dark: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+$theme_light: hsl(230, 22%, 74%);
+
+$dark_bg: hsl(230, 17%, 14%);
+$dark_top_bg_pattern: hsl(232, 19%, 15%);
+$dark_social: hsl(228, 28%, 20%);
+$dark_primary_text: hsl(228, 34%, 66%);
+$dark_secondary_text: hsl(0, 0%, 100%);
+
+$light_bg: hsl(0, 0%, 100%);
+$light_top_bg_pattern: hsl(225, 100%, 98%);
+$light_social: hsl(227, 47%, 96%);
+$light_primary_text: hsl(228, 12%, 44%);
+$light_secondary_text: hsl(230, 17%, 14%);

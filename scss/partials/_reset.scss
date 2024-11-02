@@ -1,0 +1,23 @@
+@use "./variables";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Inter";
+  background-color: #e3e3e3;
+}
+
+.container {
+  width: 375px;
+  padding: 24px;
+  margin: 0 auto;
+  background-color: variables.$light_bg;
+
+  &.dark {
+    background-color: variables.$dark_bg;
+  }
+}

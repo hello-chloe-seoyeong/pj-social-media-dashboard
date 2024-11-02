@@ -1,0 +1,28 @@
+@use "./variables";
+
+header {
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: variables.$light_secondary_text;
+  }
+
+  .summary {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    color: variables.$light_primary_text;
+    margin-top: 12px;
+  }
+
+  .mode-change {
+    border-top: 1px solid hsl(231, 13%, 61%);
+    margin-top: 24px;
+    padding-top: 20px;
+    &__text {
+      font-size: 12px;
+      font-weight: 700;
+      color: variables.$light_primary_text;
+    }
+  }
+}
