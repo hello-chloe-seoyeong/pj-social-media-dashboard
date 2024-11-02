@@ -70,3 +70,14 @@ header {
     }
   }
 }
+
+.container.dark {
+  header {
+    h1 {
+      color: variables.$dark_secondary_text;
+    }
+  }
+  .mode-change {
+    border-color: variables.$dark_primary_text;
+  }
+}

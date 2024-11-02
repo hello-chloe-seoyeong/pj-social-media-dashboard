@@ -212,3 +212,20 @@
     }
   }
 }
+
+.dark {
+  .socials {
+    .social {
+      background-color: variables.$dark_social;
+    }
+    h2,
+    strong,
+    .social__target {
+      color: variables.$dark_secondary_text;
+    }
+    .social__account,
+    .social_type {
+      color: variables.$dark_primary_text;
+    }
+  }
+}

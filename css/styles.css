@@ -87,6 +87,13 @@ header .mode-change__handle:before {
   transition: all 0.3s ease-in-out;
 }
 
+.container.dark header h1 {
+  color: hsl(0, 0%, 100%);
+}
+.container.dark .mode-change {
+  border-color: hsl(228, 34%, 66%);
+}
+
 .social {
   border-radius: 10px;
   background-color: hsl(227, 47%, 96%);
@@ -266,6 +273,19 @@ header .mode-change__handle:before {
 .socials.overview .social__numbers strong {
   font-size: 30px;
   font-weight: 700;
+}
+
+.dark .socials .social {
+  background-color: hsl(228, 28%, 20%);
+}
+.dark .socials h2,
+.dark .socials strong,
+.dark .socials .social__target {
+  color: hsl(0, 0%, 100%);
+}
+.dark .socials .social__account,
+.dark .socials .social_type {
+  color: hsl(228, 34%, 66%);
 }
 
 /*# sourceMappingURL=styles.css.map */
