@@ -1,9 +1,5 @@
 @use "./variables";
 
-main {
-  padding-bottom: 45px;
-}
-
 .social {
   border-radius: 10px;
   background-color: variables.$light_social;
@@ -83,125 +79,135 @@ main {
 }
 
 .socials {
-  .social {
-    height: 215px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+  padding-bottom: 45px;
 
-    .social__account {
-      font-size: 12px;
-      font-weight: 700;
-      color: variables.$light_primary_text;
-      border-top: 4px solid variables.$light_social;
-      padding-top: 28px;
-    }
-    strong {
-      font-size: 54px;
-      line-height: 54px;
-      font-weight: 700;
-      margin-top: 28px;
-      margin-bottom: 8px;
-    }
-
-    & + .social {
-      margin-top: 24px;
-    }
-    i.social__logo {
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 8px;
-      width: 20px;
-      height: 20px;
-      span {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        clip-path: polygon(0 0, 0 0, 0 0);
-      }
-    }
-    &.facebook {
-      .social__account {
-        border-top-color: variables.$color_facebook;
-      }
-      .social__logo {
-        background: url(../../images/icon-facebook.svg) no-repeat center center;
-      }
-    }
-    &.twitter {
-      .social__account {
-        border-top-color: variables.$color_twitter;
-      }
-      .social__logo {
-        background: url(../../images/icon-twitter.svg) no-repeat center center;
-      }
-    }
-    &.instagram {
-      .social__account {
-        border-image-slice: 7 0 0 0;
-        border-image-source: variables.$color_instagram;
-      }
-      .social__logo {
-        background: url(../../images/icon-instagram.svg) no-repeat center center;
-      }
-    }
-    &.youtube {
-      .social__account {
-        border-top-color: variables.$color_youtube;
-      }
-      .social__logo {
-        background: url(../../images/icon-youtube.svg) no-repeat center center;
-      }
-    }
-
-    .social__target {
-      text-transform: uppercase;
-      letter-spacing: 5px;
-      font-size: 12px;
-      font-weight: 200;
-    }
-
-    .social__changes {
-      margin-top: 22px;
-    }
-  }
-}
-
-.overview {
-  h2 {
-    font-size: 16px;
-    font-weight: 700;
-    color: variables.$light_primary_text;
-  }
-  .social {
-    padding: 25px 20px;
-    height: 125px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    > div {
+  &.highlight {
+    .social {
+      height: 215px;
       display: flex;
-      justify-content: space-between;
-      &:first-child {
-        align-items: flex-start;
-      }
-      &:nth-child(2) {
-        align-items: flex-end;
-      }
-    }
-    &__type {
-      > span {
-        font-size: 13px;
+      flex-direction: column;
+      overflow: hidden;
+
+      .social__account {
+        font-size: 12px;
         font-weight: 700;
         color: variables.$light_primary_text;
+        border-top: 4px solid variables.$light_social;
+        padding-top: 28px;
+      }
+      strong {
+        font-size: 54px;
+        line-height: 54px;
+        font-weight: 700;
+        margin-top: 28px;
+        margin-bottom: 8px;
+      }
+
+      & + .social {
+        margin-top: 24px;
+      }
+      i.social__logo {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 8px;
+        width: 20px;
+        height: 20px;
+        span {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          clip-path: polygon(0 0, 0 0, 0 0);
+        }
+      }
+      &.facebook {
+        .social__account {
+          border-top-color: variables.$color_facebook;
+        }
+        .social__logo {
+          background: url(../../images/icon-facebook.svg) no-repeat center
+            center;
+        }
+      }
+      &.twitter {
+        .social__account {
+          border-top-color: variables.$color_twitter;
+        }
+        .social__logo {
+          background: url(../../images/icon-twitter.svg) no-repeat center center;
+        }
+      }
+      &.instagram {
+        .social__account {
+          border-image-slice: 7 0 0 0;
+          border-image-source: variables.$color_instagram;
+        }
+        .social__logo {
+          background: url(../../images/icon-instagram.svg) no-repeat center
+            center;
+        }
+      }
+      &.youtube {
+        .social__account {
+          border-top-color: variables.$color_youtube;
+        }
+        .social__logo {
+          background: url(../../images/icon-youtube.svg) no-repeat center center;
+        }
+      }
+
+      .social__target {
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 12px;
+        font-weight: 200;
+      }
+
+      .social__changes {
+        margin-top: 22px;
       }
     }
-    &__numbers {
-      strong {
-        font-size: 30px;
-        font-weight: 700;
+  }
+
+  &.overview {
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: variables.$light_primary_text;
+      margin-bottom: 20px;
+    }
+    .social {
+      padding: 25px 20px;
+      height: 125px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      > div {
+        display: flex;
+        justify-content: space-between;
+        &:first-child {
+          align-items: flex-start;
+        }
+        &:nth-child(2) {
+          align-items: flex-end;
+        }
+      }
+      &__logo {
+        margin-right: 0;
+      }
+      &__type {
+        > span {
+          font-size: 13px;
+          font-weight: 700;
+          color: variables.$light_primary_text;
+        }
+      }
+      &__numbers {
+        strong {
+          font-size: 30px;
+          font-weight: 700;
+        }
       }
     }
   }

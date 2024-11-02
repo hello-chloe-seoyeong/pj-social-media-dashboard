@@ -30,21 +30,61 @@ header .summary {
   font-weight: 700;
   letter-spacing: 0.4px;
   color: hsl(228, 12%, 44%);
-  margin-top: 12px;
+  margin-top: 5px;
 }
 header .mode-change {
   border-top: 1px solid hsl(231, 13%, 61%);
   margin-top: 24px;
-  padding-top: 20px;
+  padding-top: 16px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
 }
 header .mode-change__text {
   font-size: 12px;
   font-weight: 700;
   color: hsl(228, 12%, 44%);
 }
-
-main {
-  padding-bottom: 45px;
+header .mode-change__switch {
+  width: 48px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+}
+header .mode-change__switch input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+header .mode-change__switch input:checked + .mode-change__handle {
+  background-image: linear-gradient(to right, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 100%);
+}
+header .mode-change__switch input:checked + .mode-change__handle:before {
+  background-color: hsl(230, 17%, 14%);
+  transform: translateX(-24px);
+}
+header .mode-change__handle {
+  border-radius: 12px;
+  background: hsl(230, 22%, 74%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+}
+header .mode-change__handle:before {
+  transform: translateX(0);
+  background-color: #fff;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  content: "";
+  transition: all 0.3s ease-in-out;
 }
 
 .social {
@@ -117,37 +157,40 @@ main {
   background: url(../../images/icon-down.svg) no-repeat center center;
 }
 
-.socials .social {
+.socials {
+  padding-bottom: 45px;
+}
+.socials.highlight .social {
   height: 215px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
-.socials .social .social__account {
+.socials.highlight .social .social__account {
   font-size: 12px;
   font-weight: 700;
   color: hsl(228, 12%, 44%);
   border-top: 4px solid hsl(227, 47%, 96%);
   padding-top: 28px;
 }
-.socials .social strong {
+.socials.highlight .social strong {
   font-size: 54px;
   line-height: 54px;
   font-weight: 700;
   margin-top: 28px;
   margin-bottom: 8px;
 }
-.socials .social + .social {
+.socials.highlight .social + .social {
   margin-top: 24px;
 }
-.socials .social i.social__logo {
+.socials.highlight .social i.social__logo {
   display: inline-block;
   vertical-align: middle;
   margin-right: 8px;
   width: 20px;
   height: 20px;
 }
-.socials .social i.social__logo span {
+.socials.highlight .social i.social__logo span {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -155,69 +198,72 @@ main {
   overflow: hidden;
   clip-path: polygon(0 0, 0 0, 0 0);
 }
-.socials .social.facebook .social__account {
+.socials.highlight .social.facebook .social__account {
   border-top-color: hsl(208, 92%, 53%);
 }
-.socials .social.facebook .social__logo {
+.socials.highlight .social.facebook .social__logo {
   background: url(../../images/icon-facebook.svg) no-repeat center center;
 }
-.socials .social.twitter .social__account {
+.socials.highlight .social.twitter .social__account {
   border-top-color: hsl(203, 89%, 53%);
 }
-.socials .social.twitter .social__logo {
+.socials.highlight .social.twitter .social__logo {
   background: url(../../images/icon-twitter.svg) no-repeat center center;
 }
-.socials .social.instagram .social__account {
+.socials.highlight .social.instagram .social__account {
   border-image-slice: 7 0 0 0;
   border-image-source: linear-gradient(to right, hsl(37, 97%, 70%) 0%, hsl(329, 70%, 58%) 100%);
 }
-.socials .social.instagram .social__logo {
+.socials.highlight .social.instagram .social__logo {
   background: url(../../images/icon-instagram.svg) no-repeat center center;
 }
-.socials .social.youtube .social__account {
+.socials.highlight .social.youtube .social__account {
   border-top-color: hsl(348, 97%, 39%);
 }
-.socials .social.youtube .social__logo {
+.socials.highlight .social.youtube .social__logo {
   background: url(../../images/icon-youtube.svg) no-repeat center center;
 }
-.socials .social .social__target {
+.socials.highlight .social .social__target {
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 12px;
   font-weight: 200;
 }
-.socials .social .social__changes {
+.socials.highlight .social .social__changes {
   margin-top: 22px;
 }
-
-.overview h2 {
-  font-size: 16px;
+.socials.overview h2 {
+  font-size: 22px;
   font-weight: 700;
   color: hsl(228, 12%, 44%);
+  margin-bottom: 20px;
 }
-.overview .social {
+.socials.overview .social {
   padding: 25px 20px;
   height: 125px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.overview .social > div {
+.socials.overview .social > div {
   display: flex;
   justify-content: space-between;
 }
-.overview .social > div:first-child {
+.socials.overview .social > div:first-child {
   align-items: flex-start;
 }
-.overview .social > div:nth-child(2) {
+.socials.overview .social > div:nth-child(2) {
   align-items: flex-end;
 }
-.overview .social__type > span {
+.socials.overview .social__logo {
+  margin-right: 0;
+}
+.socials.overview .social__type > span {
   font-size: 13px;
   font-weight: 700;
   color: hsl(228, 12%, 44%);
 }
-.overview .social__numbers strong {
+.socials.overview .social__numbers strong {
   font-size: 30px;
   font-weight: 700;
 }

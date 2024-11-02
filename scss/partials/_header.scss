@@ -12,17 +12,61 @@ header {
     font-weight: 700;
     letter-spacing: 0.4px;
     color: variables.$light_primary_text;
-    margin-top: 12px;
+    margin-top: 5px;
   }
 
   .mode-change {
     border-top: 1px solid hsl(231, 13%, 61%);
     margin-top: 24px;
-    padding-top: 20px;
+    padding-top: 16px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
     &__text {
       font-size: 12px;
       font-weight: 700;
       color: variables.$light_primary_text;
+    }
+    &__switch {
+      width: 48px;
+      height: 24px;
+      position: relative;
+      cursor: pointer;
+      input {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        &:checked + .mode-change__handle {
+          background-image: variables.$theme_dark;
+          &:before {
+            background-color: variables.$dark_bg;
+            transform: translateX(-24px);
+          }
+        }
+      }
+    }
+    &__handle {
+      border-radius: 12px;
+      background: variables.$theme_light;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      transition: all 0.3s ease-in-out;
+      &:before {
+        transform: translateX(0);
+        background-color: #fff;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        top: 3px;
+        right: 3px;
+        content: "";
+        transition: all 0.3s ease-in-out;
+      }
     }
   }
 }
