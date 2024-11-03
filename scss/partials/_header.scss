@@ -81,3 +81,9 @@ header {
     border-color: variables.$dark_primary_text;
   }
 }
+
+@media (min-width: 1119px) {
+  .social + .social {
+    margin-top: 0;
+  }
+}

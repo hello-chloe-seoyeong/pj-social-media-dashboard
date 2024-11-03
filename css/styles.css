@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  width: 375px;
+  min-width: 375px;
   padding: 24px;
   margin: 0 auto;
   background-color: hsl(0, 0%, 100%);
@@ -94,6 +94,11 @@ header .mode-change__handle:before {
   border-color: hsl(228, 34%, 66%);
 }
 
+@media (min-width: 1119px) {
+  .social + .social {
+    margin-top: 0;
+  }
+}
 .social {
   border-radius: 10px;
   background-color: hsl(227, 47%, 96%);
@@ -187,9 +192,6 @@ header .mode-change__handle:before {
   margin-top: 28px;
   margin-bottom: 8px;
 }
-.socials.highlight .social + .social {
-  margin-top: 24px;
-}
 .socials.highlight .social i.social__logo {
   display: inline-block;
   vertical-align: middle;
@@ -239,12 +241,6 @@ header .mode-change__handle:before {
 .socials.highlight .social .social__changes {
   margin-top: 22px;
 }
-.socials.overview h2 {
-  font-size: 22px;
-  font-weight: 700;
-  color: hsl(228, 12%, 44%);
-  margin-bottom: 20px;
-}
 .socials.overview .social {
   padding: 25px 20px;
   height: 125px;
@@ -275,6 +271,13 @@ header .mode-change__handle:before {
   font-weight: 700;
 }
 
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: hsl(228, 12%, 44%);
+  margin-bottom: 20px;
+}
+
 .dark .socials .social {
   background-color: hsl(228, 28%, 20%);
 }
@@ -286,6 +289,22 @@ header .mode-change__handle:before {
 .dark .socials .social__account,
 .dark .socials .social_type {
   color: hsl(228, 34%, 66%);
+}
+
+@media (min-width: 600px) {
+  .socials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .socials .social + .social {
+    margin-top: 0;
+  }
+}
+@media (min-width: 1119px) {
+  .socials {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

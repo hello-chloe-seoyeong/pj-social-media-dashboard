@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  width: 375px;
+  min-width: 375px;
   padding: 24px;
   margin: 0 auto;
   background-color: variables.$light_bg;
