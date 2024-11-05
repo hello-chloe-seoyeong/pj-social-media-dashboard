@@ -122,8 +122,7 @@
           border-top-color: variables.$color_facebook;
         }
         .social__logo {
-          background: url(./../../images/icon-facebook.svg) no-repeat center
-            center;
+          background: url(./../images/icon-facebook.svg) no-repeat center center;
         }
       }
       &.twitter {
@@ -131,8 +130,7 @@
           border-top-color: variables.$color_twitter;
         }
         .social__logo {
-          background: url(./../../images/icon-twitter.svg) no-repeat center
-            center;
+          background: url(./../images/icon-twitter.svg) no-repeat center center;
         }
       }
       &.instagram {
@@ -141,7 +139,7 @@
           border-image-source: variables.$color_instagram;
         }
         .social__logo {
-          background: url(./../../images/icon-instagram.svg) no-repeat center
+          background: url(./../images/icon-instagram.svg) no-repeat center
             center;
         }
       }
@@ -150,8 +148,7 @@
           border-top-color: variables.$color_youtube;
         }
         .social__logo {
-          background: url(./../../images/icon-youtube.svg) no-repeat center
-            center;
+          background: url(./../images/icon-youtube.svg) no-repeat center center;
         }
       }
 
